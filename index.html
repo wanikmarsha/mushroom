@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Surprise</title>
+    <style>
+        body {
+            background-color: #111;
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-image: url('./assets/images/emulator-bg.png'); /* Add your emulator background image here */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .dialog-box {
+            background-color: #222;
+            border: 4px solid #fff;
+            border-radius: 10px;
+            padding: 20px;
+            display: inline-block;
+            max-width: 90%;
+            box-shadow: 0 0 15px #fff;
+        }
+
+        h1, h2, p {
+            margin: 10px 0;
+        }
+
+        .btn {
+            background-color: #333;
+            color: #fff;
+            border: 2px solid #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.2s, transform 0.1s, box-shadow 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background-color: #555;
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #ff66cc, 0 0 30px #ff66cc; /* Glowing effect */
+        }
+
+        .btn:active {
+            background-color: #777;
+            transform: scale(0.95);
+            box-shadow: 0 0 20px #ff1493, 0 0 40px #ff1493; /* Stronger glow on click */
+        }
+
+        .letter-box {
+            border: 3px dashed #fff;
+            padding: 15px;
+            margin: 10px 0;
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- Home Page -->
+    <div id="home" class="dialog-box">
+        <h1>Happy Valentine's Day!</h1>
+        <p>Here's a little surprise for you!</p>
+        <button onclick="showPage('pageA')" class="btn" id="btnA">
+            ❤️ Button A
+        </button>
+        <button onclick="showPage('pageB')" class="btn" id="btnB">
+            ✉️ Button B
+        </button>
+    </div>
+
+    <!-- Page A -->
+    <div id="pageA" class="dialog-box" style="display: none;">
+        <h2>Page A</h2>
+        <p>This is something special just for you!</p>
+        <img src="./assets/images/bouquet-placeholder.png" alt="Bouquet" style="max-width: 100%; height: auto;"> <!-- Add your bouquet image file here -->
+        <button onclick="showPage('home')" class="btn">⬅️ Back to Home</button>
+    </div>
+
+    <!-- Page B -->
+    <div id="pageB" class="dialog-box" style="display: none;">
+        <h2>Page B</h2>
+        <div class="letter-box">
+            <p>Dear [Her Name],</p>
+            <p>This is a little note just for you, filled with thoughts and wishes straight from the heart.</p>
+            <p>Yours sincerely,<br>[Your Name]</p>
+        </div>
+        <button onclick="showPage('home')" class="btn">⬅️ Back to Home</button>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('pageA').style.display = 'none';
+            document.getElementById('pageB').style.display = 'none';
+
+            document.getElementById(pageId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
