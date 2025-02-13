@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valentine's Surprise</title>
+    <title>Not as good as the real thing ik but still</title>
     <style>
         body {
             background-color: #111;
@@ -12,7 +12,7 @@
             text-align: center;
             margin: 0;
             padding: 0;
-            background-image: url('./assets/images/bg2.jpg'); /* Add your emulator background image here */
+            background-image: url('./assets/images/bg2.jpg'); /*U know if u are reading tgis it wass so confusing when i had just started to make this lmao*/
             background-size: cover;
             background-position: center;
             display: flex;
@@ -50,13 +50,13 @@
         .btn:hover {
             background-color: #555;
             transform: scale(1.05);
-            box-shadow: 0 0 15px #ff66cc, 0 0 30px #ff66cc; /* Glowing effect */
+            box-shadow: 0 0 15px #ff66cc, 0 0 30px #ff66cc; /* Had to put comments cuz chatgpt made something entiiely diff in the first try */
         }
 
         .btn:active {
             background-color: #777;
             transform: scale(0.95);
-            box-shadow: 0 0 20px #ff1493, 0 0 40px #ff1493; /* Stronger glow on click */
+            box-shadow: 0 0 20px #ff1493, 0 0 40px #ff1493; 
         }
 
         .letter-box {
@@ -71,12 +71,12 @@
     <!-- Home Page -->
     <div id="home" class="dialog-box">
         <h1>Happy Valentine's Day!</h1>
-        <p>Here's a little surprise for you!</p>
+        <p>Pick your poison</p>
         <button onclick="showPage('pageA')" class="btn" id="btnA">
-            ❤️ Button A
+            ❤️ 
         </button>
         <button onclick="showPage('pageB')" class="btn" id="btnB">
-            ✉️ Button B
+            ✉️ 
         </button>
     </div>
 
@@ -84,7 +84,7 @@
     <div id="pageA" class="dialog-box" style="display: none;">
         <h2>Page A</h2>
         <p>This is something special just for you!</p>
-        <img src="./assets/images/flower.jpg" alt="Bouquet" style="max-width: 100%; height: auto;"> <!-- Add your bouquet image file here -->
+        <img src="./assets/images/flower.jpg" alt="Bouquet" style="max-width: 100%; height: auto;"> <!-- still need to finish this vese -->
         <button onclick="showPage('home')" class="btn">⬅️ Back to Home</button>
     </div>
 
@@ -92,9 +92,14 @@
     <div id="pageB" class="dialog-box" style="display: none;">
         <h2>Page B</h2>
         <div class="letter-box">
-            <p>Dear [Her Name],</p>
-            <p>This is a little note just for you, filled with thoughts and wishes straight from the heart.</p>
-            <p>Yours sincerely,<br>[Your Name]</p>
+            <p>Dear moo moo,</p>
+            <p>I had planned to do this a while back I just didnt know how things would end up. I really wish that you are having fun making great
+            friends enjoying every bit of your time and doing great.I have given you flowers every year and it wouldve felt very wrong if i didnt
+            this time , although i didnt want to put you in a position where you might not have wanted to recieve them and make you awkward.
+            I just wish that this makes you happy and I really dont want anything else.I miss you and i wish the best for you, always</p>
+            <p>Other than that if this was something that you didnt want or more so may ruin your peace , please just ignore it this once
+                as i wont pull something like this again.I promise that ,nor am i going to try contacting you.(although i fear i may be blocked) haha
+                <br>Again just wishing the best for you always and forever.</p>
         </div>
         <button onclick="showPage('home')" class="btn">⬅️ Back to Home</button>
     </div>
